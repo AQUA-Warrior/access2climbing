@@ -136,14 +136,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.getElementById('nav-links');
 
   toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    links.classList.toggle('open');
+    const isOpen = !links.classList.contains('open');
+    toggle.classList.toggle('active', isOpen);
+    links.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
   });
 
   links.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       toggle.classList.remove('active');
       links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -202,11 +205,26 @@ document.addEventListener('DOMContentLoaded', () => {
      FAQ ACCORDION
      ========================================================== */
   document.querySelectorAll('.faq__question').forEach(btn => {
+    const item = btn.closest('.faq__item');
+    const answer = item.querySelector('.faq__answer');
+    btn.setAttribute('aria-controls', answer.id);
+    btn.setAttribute('aria-expanded', String(item.classList.contains('active')));
+    answer.setAttribute('role', 'region');
+    answer.setAttribute('aria-labelledby', btn.id);
+    answer.setAttribute('aria-hidden', String(!item.classList.contains('active')));
+
     btn.addEventListener('click', () => {
-      const item = btn.closest('.faq__item');
       const isActive = item.classList.contains('active');
-      document.querySelectorAll('.faq__item').forEach(i => i.classList.remove('active'));
-      if (!isActive) item.classList.add('active');
+      document.querySelectorAll('.faq__item').forEach(faqItem => {
+        faqItem.classList.remove('active');
+        faqItem.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+        faqItem.querySelector('.faq__answer').setAttribute('aria-hidden', 'true');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.setAttribute('aria-hidden', 'false');
+      }
     });
   });
 

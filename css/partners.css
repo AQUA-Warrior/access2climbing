@@ -1,0 +1,51 @@
+/* ============================================================
+   PARTNERS PAGE
+   ============================================================ */
+.page-header--tight {
+  margin-bottom: 24px;
+}
+
+.partners-section {
+  padding-top: 0;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition), border-color var(--transition);
+  aspect-ratio: 1 / 1;
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.partner-card__img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 24px;
+  margin: 8px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__nav a {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-text-dim);
+}

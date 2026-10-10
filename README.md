@@ -46,7 +46,7 @@ The goal is not only to provide a day at a climbing gym. It is to help participa
 2. **Get confirmed** — The team follows up by email or SMS and provides the required waiver information. Participants under 18 need a parent or guardian to complete the applicable waivers.
 3. **Show up and climb** — The participant attends the scheduled session at Grand River Rocks — Waterloo. Comfortable clothing is all they need to bring; shoes and chalk are provided.
 
-To make the opportunity available to as many young people as possible, the program currently offers one session per participant and prioritizes first-time climbers.
+Participants may attend more than once. When spots are limited, first-time participants are prioritized.
 
 > Registration, waivers, donations, and social updates are handled by trusted external services linked from the website. This repository does not collect or store participant information.
 

@@ -21,10 +21,11 @@
       <a href="index.html" class="nav__logo">
         <span class="nav__logo-text">ACCESS<span class="accent">2</span>CLIMBING</span>
       </a>
-      <button id="nav-toggle" class="nav__toggle" aria-label="Toggle menu">
+      <button id="nav-toggle" class="nav__toggle" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul id="nav-links" class="nav__links">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="partners.html">Partners</a></li>
@@ -48,8 +49,15 @@
   </div>
 
   <!-- ===================== DONATION CARDS ===================== -->
-  <section class="section donors" style="padding-top: 1;">
+  <section class="section donors" style="padding-top: 32px;">
     <div class="container">
+
+      <div class="donors__partner-highlight glass reveal" style="margin-bottom: 32px;">
+        <div class="donors__partner-text" style="width: 100%; text-align: center;">
+          <h3 style="font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 10px;">$1,700 Raised So Far</h3>
+          <p style="margin: 0 0 10px; font-size: var(--fs-md);">Every $20 helps cover one participant's session.</p>
+        </div>
+      </div>
 
       <div class="donors__grid">
 
@@ -97,7 +105,7 @@
           <img src="images/LOGO Waterloo (black).png" alt="Grand River Rocks Logo" style="max-width:120px;height:auto;" />
         </div>
         <div class="donors__partner-text">
-          <h3>Proud Partner</h3>
+          <h3>Community Partner</h3>
           <p>
             Our sessions are hosted at <a href="https://grandriverrocks.com/waterloo/" target="_blank" rel="noopener" class="link">Grand River Rocks — Waterloo</a>.
             Follow them at <a href="https://www.instagram.com/grr_wat/" target="_blank" rel="noopener" class="link">@grr_wat</a> — a world-class facility and an incredible partner making all of this possible.
@@ -131,6 +139,7 @@
         <a href="about.html" style="font-family:var(--ff-heading);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:1px;color:var(--clr-text-dim);">About</a>
         <a href="faq.html" style="font-family:var(--ff-heading);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:1px;color:var(--clr-text-dim);">FAQ</a>
         <a href="partners.html" style="font-family:var(--ff-heading);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:1px;color:var(--clr-text-dim);">Partners</a>
+        <a href="donate.html" style="font-family:var(--ff-heading);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:1px;color:var(--clr-text-dim);">Donate</a>
         <a href="https://grandriverrocks.com/waterloo/" target="_blank" rel="noopener" style="font-family:var(--ff-heading);font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:1px;color:var(--clr-text-dim);">Grand River Rocks</a>
       </nav>
       <p class="footer__copy">&copy; 2026 Access to Climbing. All rights reserved.</p>
